@@ -14,7 +14,7 @@ namespace IronFactory
         public static (SqlConnection,Exception exception) DatabaseConnector()
         {
             Exception exception = null;
-            //SqlConnection sqlConnection = new SqlConnection("Data Source = dePayens\\SQLEXPRESS; Initial Catalog = OgrenciYonetim; Integrated Security = True");
+            
             string connectionString = "Server=MUHAMMED\\SQLEXPRESS;Database=IronFactory;Trusted_Connection=True;";
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -63,6 +63,32 @@ namespace IronFactory
                 var hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(combinedPassword));
                 var computedHash = Convert.ToBase64String(hashBytes);
                 return computedHash == hashedPassword;
+            }
+        }
+
+        public static bool BackupDatabase(string databaseName, string backupFilePath, out Exception exception)
+        {
+            exception = null; // Hata yok
+            string connectionString = "Server=MUHAMMED\\SQLEXPRESS;Database=master;Trusted_Connection=True;"; // master veritabanına bağlan
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = $"BACKUP DATABASE [{databaseName}] TO DISK = '{backupFilePath}'";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.ExecuteNonQuery(); // Yedekleme sorgusunu çalıştır
+                    }
+                    return true; // Yedekleme başarılı
+                }
+                catch (Exception ex)
+                {
+                    exception = ex; // Hata oluştu
+                    return false; // Yedekleme başarısız
+                }
             }
         }
     }

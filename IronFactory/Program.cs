@@ -19,7 +19,7 @@ namespace IronFactory
             var (connection, exception) = Helper.DatabaseConnector(); // Güncellenmiş kısım
             if (connection != null) // Bağlantı kontrolü
             {
-                Application.Run(new AddEmployee());
+                Application.Run(new Developer());
                 connection.Close(); // Uygulama kapandıktan sonra bağlantıyı kapat
             }
             else
