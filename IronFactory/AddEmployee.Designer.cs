@@ -29,21 +29,26 @@
         private void InitializeComponent()
         {
             this.lblPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.lblMailAddress = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMailAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rchAddress = new System.Windows.Forms.RichTextBox();
             this.cmbEmployeeType = new System.Windows.Forms.ComboBox();
             this.lblEmployeeType = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.txtHoliday = new System.Windows.Forms.TextBox();
+            this.lblHoliday = new System.Windows.Forms.Label();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPassword
@@ -56,24 +61,24 @@
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Password";
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(140, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(232, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Location = new System.Drawing.Point(140, 39);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(232, 27);
+            this.txtPassword.TabIndex = 1;
             // 
-            // label1
+            // lblUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(55, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User Name";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUserName.Location = new System.Drawing.Point(55, 9);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(77, 19);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "Username";
             // 
             // txtUserName
             // 
@@ -93,13 +98,13 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(140, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 27);
-            this.textBox3.TabIndex = 1;
+            this.txtName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtName.Location = new System.Drawing.Point(140, 72);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(232, 27);
+            this.txtName.TabIndex = 1;
             // 
             // lblSurname
             // 
@@ -111,13 +116,13 @@
             this.lblSurname.TabIndex = 0;
             this.lblSurname.Text = "Surname";
             // 
-            // textBox4
+            // txtSurname
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(140, 105);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 27);
-            this.textBox4.TabIndex = 1;
+            this.txtSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSurname.Location = new System.Drawing.Point(140, 105);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(232, 27);
+            this.txtSurname.TabIndex = 1;
             // 
             // label2
             // 
@@ -129,14 +134,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Phone Number";
             // 
-            // maskedTextBox1
+            // mskPhoneNumber
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.maskedTextBox1.Location = new System.Drawing.Point(140, 142);
-            this.maskedTextBox1.Mask = "0 (999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(232, 27);
-            this.maskedTextBox1.TabIndex = 2;
+            this.mskPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.mskPhoneNumber.Location = new System.Drawing.Point(140, 142);
+            this.mskPhoneNumber.Mask = "0 (999) 000-0000";
+            this.mskPhoneNumber.Name = "mskPhoneNumber";
+            this.mskPhoneNumber.Size = new System.Drawing.Size(232, 27);
+            this.mskPhoneNumber.TabIndex = 2;
             // 
             // lblMailAddress
             // 
@@ -148,13 +153,13 @@
             this.lblMailAddress.TabIndex = 0;
             this.lblMailAddress.Text = "Mail Address";
             // 
-            // textBox2
+            // txtMailAddress
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(140, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 27);
-            this.textBox2.TabIndex = 1;
+            this.txtMailAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMailAddress.Location = new System.Drawing.Point(140, 176);
+            this.txtMailAddress.Name = "txtMailAddress";
+            this.txtMailAddress.Size = new System.Drawing.Size(230, 27);
+            this.txtMailAddress.TabIndex = 1;
             // 
             // lblAddress
             // 
@@ -166,20 +171,21 @@
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Address";
             // 
-            // richTextBox1
+            // rchAddress
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(140, 212);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(230, 96);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.rchAddress.Location = new System.Drawing.Point(140, 212);
+            this.rchAddress.Name = "rchAddress";
+            this.rchAddress.Size = new System.Drawing.Size(230, 96);
+            this.rchAddress.TabIndex = 4;
+            this.rchAddress.Text = "";
             // 
             // cmbEmployeeType
             // 
+            this.cmbEmployeeType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.cmbEmployeeType.FormattingEnabled = true;
             this.cmbEmployeeType.Location = new System.Drawing.Point(140, 325);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
-            this.cmbEmployeeType.Size = new System.Drawing.Size(230, 21);
+            this.cmbEmployeeType.Size = new System.Drawing.Size(230, 27);
             this.cmbEmployeeType.TabIndex = 5;
             // 
             // lblEmployeeType
@@ -192,26 +198,78 @@
             this.lblEmployeeType.TabIndex = 6;
             this.lblEmployeeType.Text = "Type";
             // 
+            // txtSalary
+            // 
+            this.txtSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSalary.Location = new System.Drawing.Point(142, 363);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(230, 27);
+            this.txtSalary.TabIndex = 8;
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSalary.Location = new System.Drawing.Point(76, 366);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(51, 19);
+            this.lblSalary.TabIndex = 7;
+            this.lblSalary.Text = "Salary";
+            // 
+            // txtHoliday
+            // 
+            this.txtHoliday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtHoliday.Location = new System.Drawing.Point(142, 396);
+            this.txtHoliday.Name = "txtHoliday";
+            this.txtHoliday.Size = new System.Drawing.Size(230, 27);
+            this.txtHoliday.TabIndex = 10;
+            // 
+            // lblHoliday
+            // 
+            this.lblHoliday.AutoSize = true;
+            this.lblHoliday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHoliday.Location = new System.Drawing.Point(76, 399);
+            this.lblHoliday.Name = "lblHoliday";
+            this.lblHoliday.Size = new System.Drawing.Size(61, 19);
+            this.lblHoliday.TabIndex = 9;
+            this.lblHoliday.Text = "Holiday";
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddEmployee.Location = new System.Drawing.Point(236, 438);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(136, 46);
+            this.btnAddEmployee.TabIndex = 11;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 627);
+            this.ClientSize = new System.Drawing.Size(395, 513);
+            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.txtHoliday);
+            this.Controls.Add(this.lblHoliday);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblEmployeeType);
             this.Controls.Add(this.cmbEmployeeType);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rchAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mskPhoneNumber);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtMailAddress);
+            this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.lblMailAddress);
             this.Controls.Add(this.lblSurname);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Name = "AddEmployee";
             this.Text = "New Employee";
@@ -224,20 +282,25 @@
         #endregion
 
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskPhoneNumber;
         private System.Windows.Forms.Label lblMailAddress;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMailAddress;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rchAddress;
         private System.Windows.Forms.ComboBox cmbEmployeeType;
         private System.Windows.Forms.Label lblEmployeeType;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.TextBox txtHoliday;
+        private System.Windows.Forms.Label lblHoliday;
+        private System.Windows.Forms.Button btnAddEmployee;
     }
 }

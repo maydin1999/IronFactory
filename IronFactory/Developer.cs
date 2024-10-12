@@ -34,6 +34,29 @@ namespace IronFactory
             {
                 MessageBox.Show("Yedekleme hatası: " + exception.Message);
             }
+            
+        }
+
+        private void Developer_Load(object sender, EventArgs e)
+        {
+            var (connection, exception) = Helper.DatabaseConnector();
+
+            if (connection != null && connection.State == ConnectionState.Open)
+            {
+                lblStatus.Text = "ON";
+                lblStatus.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblStatus.Text = "OFF";
+                lblStatus.ForeColor = Color.Red;
+
+                // Hata mesajını göstermek isteyebilirsiniz
+                if (exception != null)
+                {
+                    MessageBox.Show("Connection Error: " + exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }
