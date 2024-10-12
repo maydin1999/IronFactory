@@ -16,7 +16,16 @@ namespace IronFactory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var (connection, exception) = Helper.DatabaseConnector(); // Güncellenmiş kısım
+            if (connection != null) // Bağlantı kontrolü
+            {
+                Application.Run(new AddEmployee());
+                connection.Close(); // Uygulama kapandıktan sonra bağlantıyı kapat
+            }
+            else
+            {
+                MessageBox.Show("Connection Error: " + exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
