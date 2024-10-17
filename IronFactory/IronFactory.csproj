@@ -58,6 +58,7 @@
     <Compile Include="Developer.Designer.cs">
       <DependentUpon>Developer.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogEntry.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

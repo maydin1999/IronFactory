@@ -91,5 +91,43 @@ namespace IronFactory
                 }
             }
         }
+
+        public static void LogAction(string action, string details, string user)
+        {
+            var (connection, exception) = Helper.DatabaseConnector();
+
+            if (connection != null)
+            {
+                try
+                {
+                    // 'User' yerine 'LogUser' kullanıyoruz
+                    string insertQuery = "INSERT INTO Logs (Timestamp, Action, Details, LogUser) VALUES (@timestamp, @action, @details, @user)";
+
+                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@timestamp", DateTime.Now);
+                        command.Parameters.AddWithValue("@action", action);
+                        command.Parameters.AddWithValue("@details", details);
+                        command.Parameters.AddWithValue("@user", user);
+
+                        command.ExecuteNonQuery(); // Log kaydını ekle
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Loglama hatası: " + ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bağlantı hatası: " + exception.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
     }
 }

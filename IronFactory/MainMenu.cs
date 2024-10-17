@@ -14,14 +14,14 @@ namespace IronFactory
 {
     public partial class MainMenu : Form
     {
-        private string _employeeName;
+        private string user;
         private string _employeeSurname;
         public MainMenu(string name, string surname, string username)
         {
             InitializeComponent();
-            _employeeName = name;
+            user = name;
             _employeeSurname = surname;
-            lblName.Text = _employeeName;
+            lblName.Text = user;
             lblSurname.Text = _employeeSurname;
             // 1. TabControl'ü ve TabPage'i oluşturun
             // TabPage isimlerini değiştir
@@ -70,6 +70,51 @@ namespace IronFactory
 
                         // DataGridView'ı tam ekran yap
                         dataGridViewEmployees.Dock = DockStyle.Fill; // DataGridView'ı forma yay
+
+                        // DataGridView için CellValueChanged olayını ekle
+                        dataGridViewEmployees.CellValueChanged += (s, args) =>
+                        {
+                            if (dataGridViewEmployees.IsCurrentCellDirty)
+                            {
+                                connection.Open();
+                                dataGridViewEmployees.CommitEdit(DataGridViewDataErrorContexts.Commit); // Değişiklikleri uygula
+
+                                // Güncellenen hücreyi bul
+                                int rowIndex = dataGridViewEmployees.CurrentCell.RowIndex;
+                                int columnIndex = dataGridViewEmployees.CurrentCell.ColumnIndex;
+
+                                // Güncellenen hücre verisi
+                                var updatedValue = dataGridViewEmployees.CurrentCell.Value;
+
+                                // Veritabanındaki ilgili kaydı güncelle
+                                string employeeId = dataTable.Rows[rowIndex]["EmployeeID"].ToString(); // EmployeeID'yi al
+                                string columnName = dataGridViewEmployees.Columns[columnIndex].Name; // Güncellenen sütun adı
+
+                                string updateQuery = $"UPDATE Employees SET {columnName} = @value WHERE EmployeeID = @employeeId";
+
+                                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                                {
+                                    updateCommand.Parameters.AddWithValue("@value", updatedValue);
+                                    updateCommand.Parameters.AddWithValue("@employeeId", employeeId);
+
+                                    try
+                                    {
+                                        updateCommand.ExecuteNonQuery(); // Güncellemeyi uygula
+
+                                        // Log kaydını ekle
+                                        string action = "Employee Updated";
+                                        string details = $"EmployeeID: {employeeId}, Column: {columnName}, New Value: {updatedValue}";
+                                        Helper.LogAction(action, details, user); // Logla
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("Güncelleme hatası: " + ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                }
+                                connection.Close();
+                            }
+                        };
 
                         // Önceki kontrolleri temizle
                         tabMainMenu.SelectedTab.Controls.Clear();
