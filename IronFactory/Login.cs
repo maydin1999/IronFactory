@@ -33,7 +33,7 @@ namespace IronFactory
             string password = txtPassword.Text;
 
             // Kullanıcı verisini al
-            SqlCommand sqlCommand = new SqlCommand("SELECT EmployeePassword, salts FROM Employees WHERE EmployeeUserName=@username", connection);
+            SqlCommand sqlCommand = new SqlCommand("SELECT EmployeePassword, salts, EmployeeName, EmployeeSurname FROM Employees WHERE EmployeeUserName=@username", connection);
             sqlCommand.Parameters.AddWithValue("@username", username);
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
@@ -41,21 +41,28 @@ namespace IronFactory
             {
                 string storedHashedPassword = reader["EmployeePassword"].ToString();
                 string salt = reader["salts"].ToString();
+                string employeeName = reader["EmployeeName"].ToString();
+                string employeeSurname = reader["EmployeeSurname"].ToString();
+                //string employeeUsername = reader["EmployeeUserName"].ToString();
 
                 // Şifreyi doğrula
                 if (Helper.VerifyPassword(password, storedHashedPassword, salt))
                 {
                     MessageBox.Show("Giriş Başarılı! Yönlendiriliyorsunuz", "Giriş Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Thread.Sleep(2000); // Kullanıcı deneyimini iyileştirmek için süre
+                    //Application.Run(new MainMenu(employeeName,employeeSurname));
+                    MainMenu mainMenu = new MainMenu(employeeName, employeeSurname, username);
+                    mainMenu.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
+                    MessageBox.Show("Username or password wrong!");
                 }
             }
             else
             {
-                MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
+                MessageBox.Show("Something went wrong!");
             }
 
             // Bağlantıyı kapat

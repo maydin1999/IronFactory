@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace IronFactory
 {
-    public partial class AddEmployee : Form
+    public partial class AddEmployee : UserControl
     {
         public AddEmployee()
         {
@@ -94,7 +94,7 @@ namespace IronFactory
                         sqlCommand1.Parameters.AddWithValue("@p10", txtHoliday.Text);
                         sqlCommand1.Parameters.AddWithValue("@p11", salt);
                         sqlCommand1.ExecuteNonQuery();
-                        MessageBox.Show("Öğrenci başarıyla oluşturuldu!");
+                        MessageBox.Show("Employee has been created!");
                     }
                 }
                 catch (Exception ex)

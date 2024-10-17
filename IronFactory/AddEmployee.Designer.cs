@@ -55,7 +55,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPassword.Location = new System.Drawing.Point(64, 42);
+            this.lblPassword.Location = new System.Drawing.Point(407, 9);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(74, 19);
             this.lblPassword.TabIndex = 0;
@@ -64,10 +64,10 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPassword.Location = new System.Drawing.Point(140, 39);
+            this.txtPassword.Location = new System.Drawing.Point(487, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(232, 27);
+            this.txtPassword.Size = new System.Drawing.Size(203, 27);
             this.txtPassword.TabIndex = 1;
             // 
             // lblUserName
@@ -92,7 +92,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblName.Location = new System.Drawing.Point(89, 75);
+            this.lblName.Location = new System.Drawing.Point(88, 43);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(49, 19);
             this.lblName.TabIndex = 0;
@@ -101,7 +101,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtName.Location = new System.Drawing.Point(140, 72);
+            this.txtName.Location = new System.Drawing.Point(139, 40);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 27);
             this.txtName.TabIndex = 1;
@@ -110,7 +110,7 @@
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSurname.Location = new System.Drawing.Point(64, 108);
+            this.lblSurname.Location = new System.Drawing.Point(407, 48);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(70, 19);
             this.lblSurname.TabIndex = 0;
@@ -119,16 +119,16 @@
             // txtSurname
             // 
             this.txtSurname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSurname.Location = new System.Drawing.Point(140, 105);
+            this.txtSurname.Location = new System.Drawing.Point(487, 45);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(232, 27);
+            this.txtSurname.Size = new System.Drawing.Size(203, 27);
             this.txtSurname.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(21, 145);
+            this.label2.Location = new System.Drawing.Point(24, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 19);
             this.label2.TabIndex = 0;
@@ -137,7 +137,7 @@
             // mskPhoneNumber
             // 
             this.mskPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.mskPhoneNumber.Location = new System.Drawing.Point(140, 142);
+            this.mskPhoneNumber.Location = new System.Drawing.Point(143, 75);
             this.mskPhoneNumber.Mask = "0 (999) 000-0000";
             this.mskPhoneNumber.Name = "mskPhoneNumber";
             this.mskPhoneNumber.Size = new System.Drawing.Size(232, 27);
@@ -147,7 +147,7 @@
             // 
             this.lblMailAddress.AutoSize = true;
             this.lblMailAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMailAddress.Location = new System.Drawing.Point(37, 179);
+            this.lblMailAddress.Location = new System.Drawing.Point(384, 78);
             this.lblMailAddress.Name = "lblMailAddress";
             this.lblMailAddress.Size = new System.Drawing.Size(97, 19);
             this.lblMailAddress.TabIndex = 0;
@@ -156,16 +156,16 @@
             // txtMailAddress
             // 
             this.txtMailAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMailAddress.Location = new System.Drawing.Point(140, 176);
+            this.txtMailAddress.Location = new System.Drawing.Point(487, 75);
             this.txtMailAddress.Name = "txtMailAddress";
-            this.txtMailAddress.Size = new System.Drawing.Size(230, 27);
+            this.txtMailAddress.Size = new System.Drawing.Size(203, 27);
             this.txtMailAddress.TabIndex = 1;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddress.Location = new System.Drawing.Point(64, 247);
+            this.lblAddress.Location = new System.Drawing.Point(55, 148);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(63, 19);
             this.lblAddress.TabIndex = 3;
@@ -173,9 +173,9 @@
             // 
             // rchAddress
             // 
-            this.rchAddress.Location = new System.Drawing.Point(140, 212);
+            this.rchAddress.Location = new System.Drawing.Point(131, 113);
             this.rchAddress.Name = "rchAddress";
-            this.rchAddress.Size = new System.Drawing.Size(230, 96);
+            this.rchAddress.Size = new System.Drawing.Size(244, 96);
             this.rchAddress.TabIndex = 4;
             this.rchAddress.Text = "";
             // 
@@ -183,16 +183,16 @@
             // 
             this.cmbEmployeeType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.cmbEmployeeType.FormattingEnabled = true;
-            this.cmbEmployeeType.Location = new System.Drawing.Point(140, 325);
+            this.cmbEmployeeType.Location = new System.Drawing.Point(487, 114);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
-            this.cmbEmployeeType.Size = new System.Drawing.Size(230, 27);
+            this.cmbEmployeeType.Size = new System.Drawing.Size(205, 27);
             this.cmbEmployeeType.TabIndex = 5;
             // 
             // lblEmployeeType
             // 
             this.lblEmployeeType.AutoSize = true;
             this.lblEmployeeType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEmployeeType.Location = new System.Drawing.Point(85, 324);
+            this.lblEmployeeType.Location = new System.Drawing.Point(435, 112);
             this.lblEmployeeType.Name = "lblEmployeeType";
             this.lblEmployeeType.Size = new System.Drawing.Size(42, 19);
             this.lblEmployeeType.TabIndex = 6;
@@ -201,16 +201,16 @@
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSalary.Location = new System.Drawing.Point(142, 363);
+            this.txtSalary.Location = new System.Drawing.Point(487, 149);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(230, 27);
+            this.txtSalary.Size = new System.Drawing.Size(203, 27);
             this.txtSalary.TabIndex = 8;
             // 
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSalary.Location = new System.Drawing.Point(76, 366);
+            this.lblSalary.Location = new System.Drawing.Point(426, 157);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(51, 19);
             this.lblSalary.TabIndex = 7;
@@ -219,16 +219,16 @@
             // txtHoliday
             // 
             this.txtHoliday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtHoliday.Location = new System.Drawing.Point(142, 396);
+            this.txtHoliday.Location = new System.Drawing.Point(487, 182);
             this.txtHoliday.Name = "txtHoliday";
-            this.txtHoliday.Size = new System.Drawing.Size(230, 27);
+            this.txtHoliday.Size = new System.Drawing.Size(203, 27);
             this.txtHoliday.TabIndex = 10;
             // 
             // lblHoliday
             // 
             this.lblHoliday.AutoSize = true;
             this.lblHoliday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHoliday.Location = new System.Drawing.Point(76, 399);
+            this.lblHoliday.Location = new System.Drawing.Point(416, 190);
             this.lblHoliday.Name = "lblHoliday";
             this.lblHoliday.Size = new System.Drawing.Size(61, 19);
             this.lblHoliday.TabIndex = 9;
@@ -237,7 +237,7 @@
             // btnAddEmployee
             // 
             this.btnAddEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddEmployee.Location = new System.Drawing.Point(236, 438);
+            this.btnAddEmployee.Location = new System.Drawing.Point(554, 215);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(136, 46);
             this.btnAddEmployee.TabIndex = 11;
@@ -249,7 +249,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 513);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.txtHoliday);
             this.Controls.Add(this.lblHoliday);
@@ -272,7 +271,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Name = "AddEmployee";
-            this.Text = "New Employee";
+            this.Size = new System.Drawing.Size(707, 268);
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
