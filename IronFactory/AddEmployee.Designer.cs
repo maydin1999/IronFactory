@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployee));
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
@@ -36,7 +37,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.mskPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.lblMailAddress = new System.Windows.Forms.Label();
             this.txtMailAddress = new System.Windows.Forms.TextBox();
@@ -49,6 +50,20 @@
             this.txtHoliday = new System.Windows.Forms.TextBox();
             this.lblHoliday = new System.Windows.Forms.Label();
             this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.dtHireDate = new System.Windows.Forms.DateTimePicker();
+            this.dtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.lblHireDate = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblDutyPeriod = new System.Windows.Forms.Label();
+            this.txtDutyPeriod = new System.Windows.Forms.TextBox();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.mskIdentityNumber = new System.Windows.Forms.MaskedTextBox();
+            this.lblIdendityNumber = new System.Windows.Forms.Label();
+            this.cmbSex = new System.Windows.Forms.ComboBox();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.lblEmployeeStatus = new System.Windows.Forms.Label();
+            this.cmbEmployeeStatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblPassword
@@ -86,7 +101,7 @@
             this.txtUserName.Location = new System.Drawing.Point(140, 6);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(232, 27);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.TabIndex = 0;
             // 
             // lblName
             // 
@@ -104,7 +119,7 @@
             this.txtName.Location = new System.Drawing.Point(139, 40);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 27);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 2;
             // 
             // lblSurname
             // 
@@ -122,17 +137,17 @@
             this.txtSurname.Location = new System.Drawing.Point(487, 45);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(203, 27);
-            this.txtSurname.TabIndex = 1;
+            this.txtSurname.TabIndex = 3;
             // 
-            // label2
+            // lblPhoneNumber
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(24, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Phone Number";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(24, 78);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(113, 19);
+            this.lblPhoneNumber.TabIndex = 0;
+            this.lblPhoneNumber.Text = "Phone Number";
             // 
             // mskPhoneNumber
             // 
@@ -141,7 +156,7 @@
             this.mskPhoneNumber.Mask = "0 (999) 000-0000";
             this.mskPhoneNumber.Name = "mskPhoneNumber";
             this.mskPhoneNumber.Size = new System.Drawing.Size(232, 27);
-            this.mskPhoneNumber.TabIndex = 2;
+            this.mskPhoneNumber.TabIndex = 4;
             // 
             // lblMailAddress
             // 
@@ -159,7 +174,7 @@
             this.txtMailAddress.Location = new System.Drawing.Point(487, 75);
             this.txtMailAddress.Name = "txtMailAddress";
             this.txtMailAddress.Size = new System.Drawing.Size(203, 27);
-            this.txtMailAddress.TabIndex = 1;
+            this.txtMailAddress.TabIndex = 5;
             // 
             // lblAddress
             // 
@@ -176,7 +191,7 @@
             this.rchAddress.Location = new System.Drawing.Point(131, 113);
             this.rchAddress.Name = "rchAddress";
             this.rchAddress.Size = new System.Drawing.Size(244, 96);
-            this.rchAddress.TabIndex = 4;
+            this.rchAddress.TabIndex = 6;
             this.rchAddress.Text = "";
             // 
             // cmbEmployeeType
@@ -186,13 +201,13 @@
             this.cmbEmployeeType.Location = new System.Drawing.Point(487, 114);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(205, 27);
-            this.cmbEmployeeType.TabIndex = 5;
+            this.cmbEmployeeType.TabIndex = 7;
             // 
             // lblEmployeeType
             // 
             this.lblEmployeeType.AutoSize = true;
             this.lblEmployeeType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEmployeeType.Location = new System.Drawing.Point(435, 112);
+            this.lblEmployeeType.Location = new System.Drawing.Point(433, 117);
             this.lblEmployeeType.Name = "lblEmployeeType";
             this.lblEmployeeType.Size = new System.Drawing.Size(42, 19);
             this.lblEmployeeType.TabIndex = 6;
@@ -222,7 +237,7 @@
             this.txtHoliday.Location = new System.Drawing.Point(487, 182);
             this.txtHoliday.Name = "txtHoliday";
             this.txtHoliday.Size = new System.Drawing.Size(203, 27);
-            this.txtHoliday.TabIndex = 10;
+            this.txtHoliday.TabIndex = 9;
             // 
             // lblHoliday
             // 
@@ -237,18 +252,171 @@
             // btnAddEmployee
             // 
             this.btnAddEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddEmployee.Location = new System.Drawing.Point(554, 215);
+            this.btnAddEmployee.Location = new System.Drawing.Point(556, 374);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(136, 46);
-            this.btnAddEmployee.TabIndex = 11;
+            this.btnAddEmployee.TabIndex = 17;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
+            // dtHireDate
+            // 
+            this.dtHireDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.dtHireDate.Location = new System.Drawing.Point(131, 229);
+            this.dtHireDate.Name = "dtHireDate";
+            this.dtHireDate.Size = new System.Drawing.Size(240, 27);
+            this.dtHireDate.TabIndex = 10;
+            // 
+            // dtEndDate
+            // 
+            this.dtEndDate.Enabled = false;
+            this.dtEndDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.dtEndDate.Location = new System.Drawing.Point(487, 229);
+            this.dtEndDate.Name = "dtEndDate";
+            this.dtEndDate.Size = new System.Drawing.Size(203, 27);
+            this.dtEndDate.TabIndex = 11;
+            // 
+            // lblHireDate
+            // 
+            this.lblHireDate.AutoSize = true;
+            this.lblHireDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHireDate.Location = new System.Drawing.Point(52, 235);
+            this.lblHireDate.Name = "lblHireDate";
+            this.lblHireDate.Size = new System.Drawing.Size(73, 19);
+            this.lblHireDate.TabIndex = 16;
+            this.lblHireDate.Text = "Hire Date";
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEndDate.Location = new System.Drawing.Point(404, 235);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(71, 19);
+            this.lblEndDate.TabIndex = 17;
+            this.lblEndDate.Text = "End Date";
+            // 
+            // lblDutyPeriod
+            // 
+            this.lblDutyPeriod.AutoSize = true;
+            this.lblDutyPeriod.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDutyPeriod.Location = new System.Drawing.Point(34, 275);
+            this.lblDutyPeriod.Name = "lblDutyPeriod";
+            this.lblDutyPeriod.Size = new System.Drawing.Size(91, 19);
+            this.lblDutyPeriod.TabIndex = 18;
+            this.lblDutyPeriod.Text = "Duty Period";
+            // 
+            // txtDutyPeriod
+            // 
+            this.txtDutyPeriod.Enabled = false;
+            this.txtDutyPeriod.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtDutyPeriod.Location = new System.Drawing.Point(131, 272);
+            this.txtDutyPeriod.Name = "txtDutyPeriod";
+            this.txtDutyPeriod.Size = new System.Drawing.Size(240, 27);
+            this.txtDutyPeriod.TabIndex = 12;
+            // 
+            // lblBirthday
+            // 
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBirthday.Location = new System.Drawing.Point(404, 272);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(68, 19);
+            this.lblBirthday.TabIndex = 22;
+            this.lblBirthday.Text = "Birthday";
+            // 
+            // dtBirthday
+            // 
+            this.dtBirthday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.dtBirthday.Location = new System.Drawing.Point(487, 269);
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(203, 27);
+            this.dtBirthday.TabIndex = 13;
+            // 
+            // mskIdentityNumber
+            // 
+            this.mskIdentityNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.mskIdentityNumber.Location = new System.Drawing.Point(131, 305);
+            this.mskIdentityNumber.Mask = "00000000000";
+            this.mskIdentityNumber.Name = "mskIdentityNumber";
+            this.mskIdentityNumber.Size = new System.Drawing.Size(240, 27);
+            this.mskIdentityNumber.TabIndex = 14;
+            this.mskIdentityNumber.ValidatingType = typeof(int);
+            // 
+            // lblIdendityNumber
+            // 
+            this.lblIdendityNumber.AutoSize = true;
+            this.lblIdendityNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIdendityNumber.Location = new System.Drawing.Point(6, 308);
+            this.lblIdendityNumber.Name = "lblIdendityNumber";
+            this.lblIdendityNumber.Size = new System.Drawing.Size(126, 19);
+            this.lblIdendityNumber.TabIndex = 23;
+            this.lblIdendityNumber.Text = "Idendity Number";
+            // 
+            // cmbSex
+            // 
+            this.cmbSex.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.cmbSex.FormattingEnabled = true;
+            this.cmbSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbSex.Location = new System.Drawing.Point(485, 308);
+            this.cmbSex.Name = "cmbSex";
+            this.cmbSex.Size = new System.Drawing.Size(205, 27);
+            this.cmbSex.TabIndex = 15;
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSex.Location = new System.Drawing.Point(426, 313);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(32, 19);
+            this.lblSex.TabIndex = 26;
+            this.lblSex.Text = "Sex";
+            // 
+            // lblEmployeeStatus
+            // 
+            this.lblEmployeeStatus.AutoSize = true;
+            this.lblEmployeeStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEmployeeStatus.Location = new System.Drawing.Point(352, 349);
+            this.lblEmployeeStatus.Name = "lblEmployeeStatus";
+            this.lblEmployeeStatus.Size = new System.Drawing.Size(123, 19);
+            this.lblEmployeeStatus.TabIndex = 28;
+            this.lblEmployeeStatus.Text = "Employee Status";
+            // 
+            // cmbEmployeeStatus
+            // 
+            this.cmbEmployeeStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.cmbEmployeeStatus.FormattingEnabled = true;
+            this.cmbEmployeeStatus.Items.AddRange(new object[] {
+            "Working",
+            "Quits"});
+            this.cmbEmployeeStatus.Location = new System.Drawing.Point(485, 341);
+            this.cmbEmployeeStatus.Name = "cmbEmployeeStatus";
+            this.cmbEmployeeStatus.Size = new System.Drawing.Size(205, 27);
+            this.cmbEmployeeStatus.TabIndex = 16;
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(700, 427);
+            this.Controls.Add(this.lblEmployeeStatus);
+            this.Controls.Add(this.cmbEmployeeStatus);
+            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.cmbSex);
+            this.Controls.Add(this.mskIdentityNumber);
+            this.Controls.Add(this.lblIdendityNumber);
+            this.Controls.Add(this.lblBirthday);
+            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.txtDutyPeriod);
+            this.Controls.Add(this.lblDutyPeriod);
+            this.Controls.Add(this.lblEndDate);
+            this.Controls.Add(this.lblHireDate);
+            this.Controls.Add(this.dtEndDate);
+            this.Controls.Add(this.dtHireDate);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.txtHoliday);
             this.Controls.Add(this.lblHoliday);
@@ -261,7 +429,7 @@
             this.Controls.Add(this.mskPhoneNumber);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.txtMailAddress);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.lblMailAddress);
@@ -270,8 +438,10 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddEmployee";
-            this.Size = new System.Drawing.Size(707, 268);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add Employee to Factory";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,7 +458,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.MaskedTextBox mskPhoneNumber;
         private System.Windows.Forms.Label lblMailAddress;
         private System.Windows.Forms.TextBox txtMailAddress;
@@ -301,5 +471,19 @@
         private System.Windows.Forms.TextBox txtHoliday;
         private System.Windows.Forms.Label lblHoliday;
         private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.DateTimePicker dtHireDate;
+        private System.Windows.Forms.DateTimePicker dtEndDate;
+        private System.Windows.Forms.Label lblHireDate;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Label lblDutyPeriod;
+        private System.Windows.Forms.TextBox txtDutyPeriod;
+        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.DateTimePicker dtBirthday;
+        private System.Windows.Forms.MaskedTextBox mskIdentityNumber;
+        private System.Windows.Forms.Label lblIdendityNumber;
+        private System.Windows.Forms.ComboBox cmbSex;
+        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.Label lblEmployeeStatus;
+        private System.Windows.Forms.ComboBox cmbEmployeeStatus;
     }
 }

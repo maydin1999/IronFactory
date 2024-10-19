@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace IronFactory
 {
-    public partial class AddEmployee : UserControl
+    public partial class AddEmployee : Form
     {
         public AddEmployee()
         {
@@ -67,6 +67,8 @@ namespace IronFactory
                         string salt;
 
                         int SelectedCmb = cmbEmployeeType.SelectedIndex + 1;
+                        DateTime dtHireDates = dtHireDate.Value; // dtHireDatePicker sizin DateTimePicker nesneniz
+                        DateTime dtBirthdays = dtBirthday.Value; // dtBirthdayPicker de bir diğer DateTimePicker nesneniz
 
                         string hashedPassword = Helper.HashPassword(password, out salt);
                         SqlCommand sqlCommand1 = new SqlCommand("INSERT INTO Employees (" +
@@ -80,8 +82,13 @@ namespace IronFactory
                             "EmployeeTypeID," +
                             "EmployeeSalary," +
                             "EmployeeHolidayEntitlement," +
-                            "salts) " +
-                            "VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10, @p11)", connection);
+                            "salts," +
+                            "EmployeeHireDate," +
+                            "EmployeeBirthday," +
+                            "EmployeeIdentityNumber," +
+                            "EmployeeSex," +
+                            "EmployeeStatus) " +
+                            "VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10, @p11, @p12, @p13, @p14, @p15, @p16)", connection);
                         sqlCommand1.Parameters.AddWithValue("@p1", txtUserName.Text);
                         sqlCommand1.Parameters.AddWithValue("@p2", hashedPassword);
                         sqlCommand1.Parameters.AddWithValue("@p3", txtName.Text);
@@ -93,6 +100,11 @@ namespace IronFactory
                         sqlCommand1.Parameters.AddWithValue("@p9", txtSalary.Text);
                         sqlCommand1.Parameters.AddWithValue("@p10", txtHoliday.Text);
                         sqlCommand1.Parameters.AddWithValue("@p11", salt);
+                        sqlCommand1.Parameters.AddWithValue("@p12", dtHireDates);
+                        sqlCommand1.Parameters.AddWithValue("@p13", dtBirthdays);
+                        sqlCommand1.Parameters.AddWithValue("@p14", mskIdentityNumber.Text);
+                        sqlCommand1.Parameters.AddWithValue("@p15", cmbSex.SelectedIndex);
+                        sqlCommand1.Parameters.AddWithValue("@p16", cmbEmployeeStatus.SelectedIndex);
                         sqlCommand1.ExecuteNonQuery();
                         MessageBox.Show("Employee has been created!");
                     }
