@@ -1,4 +1,5 @@
 using IronFactory;
+using IronFactoryAspNet.Data;
 using Microsoft.Data.SqlClient;
 internal class Program
 {
@@ -6,8 +7,15 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+
+        // UserRepository'i DI konteynerine ekleyin
+        builder.Services.AddScoped<UserRepository>();
+
+        // Veritabaný baðlantý dizesini yapýlandýrma dosyasýndan alalým
+        builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
         var app = builder.Build();
 
@@ -27,9 +35,11 @@ internal class Program
         app.UseAuthorization();
 
         app.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+                    name: "default",
+                    pattern: "{controller=Account}/{action=Login}/{id?}"); // Giriþ sayfasýný varsayýlan olarak ayarladýk.
+
 
         app.Run();
+        // Aþaðýdaki satýrý ekleyin
     }
 }
